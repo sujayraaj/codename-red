@@ -66,6 +66,15 @@ const data= {
         }
 
     ],
+    education:[
+        {
+            institute: 'Indian Institute of Technology',
+            location: 'Dhanbad, Jharkhand, India',
+            degree: '5 Year Integrated Master of Technology',
+            stream: 'Mathematics and Computing',
+            year: '2016'
+        },
+    ],
     labels: {
       introduction: "Introduction"
     }
