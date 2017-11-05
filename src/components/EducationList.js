@@ -2,10 +2,9 @@ import React from 'react';
 
 import Education from './Education';
 
-const EducationList = ({educationListData}) => {
-    console.log('EDUCATION',educationListData)
+const EducationList = ({educationListData, className}) => {
         return (
-            <div>
+            <div className={className}>
             <h3>Education</h3> 
             {
                 educationListData.map(val=><Education {...val}/>)
