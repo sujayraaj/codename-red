@@ -8,13 +8,14 @@ const Experience = ({
     endDate,
     roles,
     className,
+    theme,
 }) => {
         return (
-            <article className={className}>
-            <h4>{organization}</h4>
-            <p><span>{startDate}</span> to <span>{endDate}</span></p>
+            <article className={theme.experienceItem}>
+            <h4 className={theme.organization}>{organization}</h4>
+            <p className={theme.experienceDate}><span className={theme.startDate}>{startDate}</span> to <span className={theme.endDate}>{endDate}</span></p>
             {
-                roles.map(val=> <Role {...val}/>)
+                roles.map(val=> <Role theme={theme} {...val}/>)
             }
     </article>        
 

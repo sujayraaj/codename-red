@@ -3,33 +3,39 @@ import ExperienceList from "./ExperienceList";
 import EducationList from "./EducationList";
 import Skills from "./Skills";
 import PersonalProjects from "./PersonalProjects";
+import Section from "./Section";
 
 const Body = ({
   experienceListData,
   educationListData,
   className,
-  personalProjects
+  personalProjects,
+  theme,
 }) => {
   return (
-    <section className={className}>
-      <section>
+    <Section className={theme.bodySection}>
+      <Section className={theme.experienceSection}>
         <ExperienceList
           experienceListData={experienceListData}
-          className="experience-list box-shadow"
+          theme={theme}
         />
-      </section>
-      <section>
-        <Skills />
+      </Section>
+      <Section className={theme.skillsSection}>
+        <Skills theme={theme} />
+      </Section>
+      <Section className={theme.personalProjectSection}>
         <PersonalProjects
           projectList={personalProjects}
-          className="box-shadow"
+          theme={theme}
         />
+        </Section>
+        <Section className={theme.educationSection}>
         <EducationList
           educationListData={educationListData}
-          className="education-list box-shadow margin-top"
+          theme={theme}
         />
-      </section>
-    </section>
+      </Section>
+    </Section>
   );
 };
 

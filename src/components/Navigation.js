@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Navigation = ({navigationData, className }) => {
+const Navigation = ({navigationData, theme }) => {
         return (
-            <nav>
+            <nav className={theme.mainNavigation}>
+            <div className={theme.navImage}>SR</div>
+            <div className={theme.navContent}>
             {
-                navigationData.map(val=> <div>
+                navigationData.map(val=> 
                     <a href={val.loc}>{val.display}</a>
-                </div>)
+                )
             }
+            </div>
             </nav>     
         );            
 }

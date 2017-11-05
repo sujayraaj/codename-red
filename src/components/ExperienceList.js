@@ -1,14 +1,13 @@
 import React from 'react';
 
-import './ExperienceList.css';
 import Experience from './Experience';
 
-const ExperienceList = ({experienceListData, className}) => {
+const ExperienceList = ({experienceListData, className, theme}) => {
         return (
-            <div className={className}>
-            <h3 className="box-shadow">Experience</h3> 
+            <div className={theme.experienceList}>
+            <h3 className={theme.experienceLabel}>Experience</h3> 
             {
-                experienceListData.map(val=><Experience {...val} className="box-shadow margin-bottom"/>)
+                experienceListData.map(val=><Experience {...val} theme={theme} />)
             }
             </div>       
         );            

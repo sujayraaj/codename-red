@@ -1,0 +1,116 @@
+:root {
+  --white: #fff;
+  --grey: #aeaeae;
+  --lighter-grey: #dedede;
+  --yellow: #ffad15;
+  --offwhite: #f8f8f8;
+}
+
+/** App Level Styling */
+body {
+  font-family: 'Roboto Slab', serif;
+  
+}
+.App{
+  display: flex;
+  & > .leftSection {
+    flex: 0 0 12em;
+    padding: 3em;
+    background: #17063A;   
+  }  
+  & > .rightSection {
+    padding:0 3em;    
+  }
+}
+
+
+/** Navigation Styling */
+.mainNavigation {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  justify-content: center;
+  flex-direction: column;
+  & > .navImage{
+    color:white; 
+    display: flex;
+    margin-bottom:5vh;
+    justify-content:center;
+  }
+  & > .navContent {
+    display:flex;
+    justify-content:center;
+    justify-content: center;
+    flex-direction: column;
+    & > a {
+      color:white; 
+      display: flex;
+      justify-content:center;
+      margin-bottom: 2vh;
+    }
+  }
+  
+}
+
+
+
+/** Header Styling */
+
+.header {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  & > .nameAndTagLine {
+    & > .name {
+      font-size: 5em;
+      margin-bottom: 0;
+    }
+    & > .tagline {
+      margin-top:0;
+    }
+  }
+}
+
+
+.experienceSection {
+  min-height: 100vh;
+  & > .experienceList {
+    & > .experienceLabel {
+      font-size:3em;
+    }
+    & > .experienceItem {
+      position: relative;
+      & > .organization {
+        margin:0;
+        font-size: 2em;
+      }
+      & > .experienceDate {
+        position: absolute;
+        top:0;
+        right:0;
+        font-size:1em;
+        & > .startDate {
+
+        }
+        & > .endDate {
+
+        }
+      }
+      & > .role {
+        & > .roleTitle {
+          font-size: 1.25rem;
+          margin-bottom:0;
+        }
+        & > .roleSummary {
+
+        }
+        & > .roleDescriptionList {
+          & > .roleDescriptionListItem {
+
+          }
+         }
+      }
+    }
+  }
+}

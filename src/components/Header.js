@@ -3,17 +3,17 @@ import pathOr from 'lodash/fp/pathOr';
 
 import Introduction from './Introduction';
 import NameAndTagline from './NameAndTagline';
+import Icons from './Icons';
 
-import './Header.css'
 
-const Header = ({name, tagline, introduction, labels, className}) => 
-                 (<header className={className}>
-                    <NameAndTagline className="name-and-tagline box-shadow"
-                                    name={name}
-                                    tagline={tagline}/>
+const Header = ({name, tagline, introduction, labels, className, theme}) => 
+                 (<header className={theme.header}>
+                    <NameAndTagline name={name}
+                                    tagline={tagline} theme={theme}/>
                     <Introduction introduction={introduction}
                                   introLabel={pathOr('','introduction',labels)}
-                                  className="introduction box-shadow margin-top"/>
+                                  theme={theme} />
+                    <Icons iconData={[{name:'facebook',loc:'www.facebook.com/sujayraaj'}]} />
                 </header>)
                                 
 

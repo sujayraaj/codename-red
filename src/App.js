@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types';
 import "./variables.css";
 import "./App.css";
 
@@ -6,6 +7,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import Section from "./components/Section";
 
 class App extends React.PureComponent {
   render() {
@@ -17,25 +19,33 @@ class App extends React.PureComponent {
       experience,
       education,
       personalProjects,
-      navigation
+      navigation,
     } = { ...this.props.data };
+    const theme = {...this.props.theme};
     return (
-      <div className="App box-shadow">
-        <Navigation navigationData={navigation}/>
-        <Header
+      <div className={theme.App}>
+        <Section className={theme.leftSection}>
+          <Navigation navigationData={navigation} theme={theme}/>
+          <span/>
+        </Section>
+        <Section className={theme.rightSection}>
+          <Header
           name={name}
           tagline={tagline}
           introduction={introduction}
           labels={labels}
-          className="header box-shadow"
+          className={theme.header}
+          theme={theme}
         />
         <Body
           experienceListData={experience}
           educationListData={education}
           personalProjects={personalProjects}
-          className="header box-shadow margin-top"
+          className={theme.body}
+          theme={theme}
         />
-        <Footer className="header box-shadow" />
+        <Footer theme={theme} />
+        </Section>
       </div>
     );
   }

@@ -1,10 +1,10 @@
 import React from "react";
 
-const Project = ({ title, description, url }) => (
+const Project = ({ title, description, url, theme }) => (
   <div>
-    <h4>{title}</h4>
-    <p>{description}</p>
-    <a href={url}>Go To Project</a>
+    <h4 className={theme.projectTitle}>{title}</h4>
+    <p className={theme.projectDescription}>{description}</p>
+    <a className={theme.projectURL} href={url}>Go To Project</a>
   </div>
 );
 
