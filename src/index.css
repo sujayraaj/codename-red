@@ -114,3 +114,34 @@ body {
     }
   }
 }
+
+.personalProjectSection {
+  & > .personalProjects {
+    & > .personalProjectsLabel {
+      font-size: 3rem;
+    }
+    & > .projectList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      & > .project {
+        color:white;
+        flex: 0 0 20em;
+        padding: 1em;
+        background: #17063A;
+        margin-bottom:3em;
+        display: flex;
+        flex-direction: column;
+        & > .projectTitle{
+          display:flex;
+        }
+        &  .projectURL {
+          background: white;
+          padding:0.2em;
+          text-decoration: none;
+          flex-basis: 100%;
+        }
+      }      
+    }
+  }
+}
