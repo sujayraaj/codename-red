@@ -1,6 +1,9 @@
 const data = {
+  avatarUrl: "/images/image.png",
   name: "SUJAY RAJ",
-  tagline: "Fulltime Frontend, Parttime Backend, Sometimes Devops",
+  firstName:"SUJAY",
+  lastName:"RAJ",
+  tagline: "Fulltime Frontend, Part-time Backend, Sometimes Devops",
   introduction: `Sujay is currently working as an Associate, Experience Technology in Sapient’s Gurgaon office. During his current work at Sapient, he has worked in front-end roles while delivering Projects spanning CMS, front-end MVC web-apps, hybrid mobile app and maintainence projects. Further, his first few months of work at Sapient involved extensive training in front-end web technologies like ReactJS+Redux, Javascript ( ES5 and ES6 ), HTML5, CSS3 and Bootstrap. Not being limited to roles, he has taken initiative in learning fullstack web development, delving into technologies like Node.js/Express.js as backend and MongoDB as the database, and devops skills like hosting, vps configuration and, Nginx server and its configuration. His past experience before working at Sapient includes working as a software development intern in a program organized by a Leading Search-Engine Provider. His past work included porting a web server to a real time operating system, wherein he dealt extensively with network protocols.`,
   experience: [
     {

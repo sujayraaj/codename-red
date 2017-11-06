@@ -8,11 +8,22 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import Section from "./components/Section";
+import ColorPallete from "./components/ColorPallete";
+
+import palette from './palette';
 
 class App extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {
+      paletteIndex:0
+    }
+  }
   render() {
     const {
       name,
+      firstName,
+      lastName,
       tagline,
       introduction,
       labels,
@@ -20,15 +31,17 @@ class App extends React.PureComponent {
       education,
       personalProjects,
       navigation,
+      avatarUrl,
     } = { ...this.props.data };
     const theme = {...this.props.theme};
     return (
       <div className={theme.App}>
+        <ColorPallete {...palette[4]}/>
         <Section className={theme.leftSection}>
-          <Navigation navigationData={navigation} theme={theme}/>
-          <span/>
-        </Section>
+          <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl}/>
+          </Section>
         <Section className={theme.rightSection}>
+          <button className={theme.paletteButton} onClick={(evt)=> this.setState({paletteIndex:(this.state.paletteIndex+1)%palette.length})} >Next Palette</button>
           <Header
           name={name}
           tagline={tagline}
@@ -36,6 +49,8 @@ class App extends React.PureComponent {
           labels={labels}
           className={theme.header}
           theme={theme}
+          firstName={firstName}
+          lastName={lastName}
         />
         <Body
           experienceListData={experience}

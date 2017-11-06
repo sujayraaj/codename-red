@@ -1,0 +1,59 @@
+/** First */
+
+:root {
+  --color-a: #17063A;
+  --color-b: #645771;
+  --color-c: #6E6077;
+  --color-d: #908BA4;
+  --color-e: #DBD7D2;
+}
+
+/* Second */
+
+:root {
+  --color-a: #A64B50;
+  --color-b: #AD5262;
+  --color-c: #C1958B;
+  --color-d: #BEAD91;
+  --color-e: #F4E3BC;
+}
+
+/* third */
+
+:root {
+  --color-a: #21213B;
+  --color-b: #547793;
+  --color-c: #5B728B;
+  --color-d: #749392;
+  --color-e: #78B3C5;
+}
+
+/* Fourth */
+F6F7F8
+B9BEBC
+B0B5CA
+949DBD
+6095C9 
+
+:root {
+  --color-a: #6095C9;
+  --color-b: #949DBD;
+  --color-c: #B0B5CA;
+  --color-d: #B9BEBC;
+  --color-e: #F6F7F8;
+}
+
+
+
+
+
+
+
+
+
+
+A64B50
+BEAD91
+F4E3BC
+C1958B
+AD5262

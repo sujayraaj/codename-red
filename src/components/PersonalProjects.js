@@ -6,8 +6,9 @@ const PersonalProjects = ({ projectList, theme }) => (
     <h3 className={theme.personalProjectsLabel}>Personal Projects</h3>
     <div className={theme.projectList}>
     {projectList.map(val => <Project {...val} theme={theme}/>)}
-    </div>
+    </div> 
   </article>
 );
+/* comments */
 
 export default PersonalProjects;

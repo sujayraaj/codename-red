@@ -6,9 +6,9 @@ import NameAndTagline from './NameAndTagline';
 import Icons from './Icons';
 
 
-const Header = ({name, tagline, introduction, labels, className, theme}) => 
+const Header = ({name, tagline, introduction, labels, className, theme, firstName,lastName}) => 
                  (<header className={theme.header}>
-                    <NameAndTagline name={name}
+                    <NameAndTagline name={name} firstName={firstName} lastName={lastName}
                                     tagline={tagline} theme={theme}/>
                     <Introduction introduction={introduction}
                                   introLabel={pathOr('','introduction',labels)}
