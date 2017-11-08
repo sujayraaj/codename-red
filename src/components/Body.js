@@ -11,6 +11,7 @@ const Body = ({
   className,
   personalProjects,
   theme,
+  skills,
 }) => {
   return (
     <Section className={theme.bodySection}>
@@ -21,7 +22,7 @@ const Body = ({
         />
       </Section>
       <Section className={theme.skillsSection}>
-        <Skills theme={theme} />
+        <Skills theme={theme} skillsPieChart={skills.skillsPieChart} />
       </Section>
       <Section className={theme.personalProjectSection}>
         <PersonalProjects

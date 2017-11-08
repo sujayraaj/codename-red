@@ -154,15 +154,30 @@ const data = {
       url: "https://codepen.io/sujayraaj/pen/kXQxLk"
     }
   ],
+  skills:{
+    skillsPieChart:{
+      width:600,
+      height:600,
+      radius:300,
+      pieData: [
+        { value: 10, color: 'red', opacity: 0.5, name:'A' },
+        { value: 30, color: 'green', opacity: 0.5, name:'B' },
+        { value: 45, color: 'yellow', opacity: 0.5, name:'C' },
+        { value: 5, color: 'blue', opacity: 0.5, name:'D' },
+        { value: 10, color: 'purple', opacity: 0.5, name:'E' },
+      ]
+    }
+  },
   labels: {
     introduction: "Introduction",
   },
-  navigation: [{loc:'#header',display:'ABOUT'},
-  {loc:'#experience',display:'EXPERIENCE'},
-  {loc:'#education',display:'EDUCATION'},
-  {loc:'#skills',display:'SKILLS'},
-  {loc:'#personal',display:'PERSONAL PROJECTS'},
-  {loc:'#awards',display:'AWARDS'},
+  navigation: [
+    {loc:'#header',display:'ABOUT'},
+    {loc:'#experience',display:'EXPERIENCE'},
+    {loc:'#education',display:'EDUCATION'},
+    {loc:'#skills',display:'SKILLS'},
+    {loc:'#personal',display:'PERSONAL PROJECTS'},
+    {loc:'#awards',display:'AWARDS'},
   ]
 };
 

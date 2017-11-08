@@ -32,6 +32,7 @@ class App extends React.PureComponent {
       personalProjects,
       navigation,
       avatarUrl,
+      skills,
     } = { ...this.props.data };
     const theme = {...this.props.theme};
     return (
@@ -58,6 +59,7 @@ class App extends React.PureComponent {
           personalProjects={personalProjects}
           className={theme.body}
           theme={theme}
+          skills={skills}
         />
         <Footer theme={theme} />
         </Section>
