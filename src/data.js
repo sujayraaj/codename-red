@@ -157,7 +157,7 @@ const data = {
   labels: {
     introduction: "Introduction",
   },
-  navigation: [{loc:'#about',display:'ABOUT'},
+  navigation: [{loc:'#header',display:'ABOUT'},
   {loc:'#experience',display:'EXPERIENCE'},
   {loc:'#education',display:'EDUCATION'},
   {loc:'#skills',display:'SKILLS'},

@@ -36,7 +36,7 @@ class App extends React.PureComponent {
     const theme = {...this.props.theme};
     return (
       <div className={theme.App}>
-        <ColorPallete {...palette[4]}/>
+        <ColorPallete {...palette[this.state.paletteIndex]}/>
         <Section className={theme.leftSection}>
           <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl}/>
           </Section>

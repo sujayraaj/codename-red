@@ -7,7 +7,7 @@ import Icons from './Icons';
 
 
 const Header = ({name, tagline, introduction, labels, className, theme, firstName,lastName}) => 
-                 (<header className={theme.header}>
+                 (<header className={theme.header} id="header">
                     <NameAndTagline name={name} firstName={firstName} lastName={lastName}
                                     tagline={tagline} theme={theme}/>
                     <Introduction introduction={introduction}
