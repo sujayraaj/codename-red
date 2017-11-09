@@ -1,4 +1,4 @@
-'use strict';
+
 
 const autoprefixer = require('autoprefixer');
 const path = require('path');
@@ -176,6 +176,7 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
+                        modules:true,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
                       },
@@ -186,8 +187,10 @@ module.exports = {
                         // Necessary for external CSS imports to work
                         // https://github.com/facebookincubator/create-react-app/issues/2677
                         ident: 'postcss',
+                        modules:true,
                         plugins: () => [
                           require('postcss-flexbugs-fixes'),
+                          require('postcss-nested'),
                           autoprefixer({
                             browsers: [
                               '>1%',
