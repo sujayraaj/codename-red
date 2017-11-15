@@ -9,7 +9,7 @@ export const ColorPallete = ({darkest,darker,normal,lighter,lightest}) =>
   --lighter-color: ${lighter};
   --lightest-color: ${lightest};
 }`}
-    </style>
+    </style>;
 
 
 export default ColorPallete;
