@@ -1,18 +1,25 @@
 
 /** App Level Styling */
+@font-face {
+  font-family: 'Block Stock';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Block Stock'), local('BlockStock'), url(http://localhost:3001/block_stock.ttf) format('truetype');
+}
+
 body {
   font-family: 'Roboto Slab', serif;
+  margin:0;
   
 }
 .App{
   display: flex;
   & > .leftSection {
-    flex: 0 0 12em;
-    padding: 3em;
-    background: var(--darkest-color);   
+    position: absolute;
+    top:200px;
+    left:200px;
   }  
   & > .rightSection {
-    padding:0 3em;
     background: var(--lightest-color);
   }
 }
@@ -25,45 +32,114 @@ body {
 
 /** Navigation Styling */
 .mainNavigation {
-  display: flex;
-  height: 100vh;
-  position: fixed;
-  justify-content: center;
-  flex-direction: column;
+  position: absolute;
+  width:10em;
+  height:10em;
+  background:black;
+  border-radius:50%;
+  transition: width 500ms,height 500ms;
   & > .navImage{
-    color:var(--lightest-color); 
-    display: flex;
-    margin-bottom:5vh;
-    justify-content:center;
+    transform:translate(6em,6em);
+    position: absolute;
     & > img {
-      width: 11.5em;
-      height: 11.5em;
-      border-radius: 50%;
-      border: 0.5em solid var(--darker-color);
+      position: absolute;
+      z-index: 100;
+      width:6em;
+      height:6em;
+      border-radius:50%;
+      transform:translate(-0.5em,-0.5em);
     }
   }
   & > .navContent {
-    display:flex;
-    justify-content:center;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    transform:translate(6em,6em);
     & > a {
-      background: var(--lightest-color);
-      display: flex;
-      padding:0.5em;
-      text-decoration: none;
-      flex-basis: 100%;
-      justify-content:center;
-      margin-bottom: 1vh;
+      position: absolute;
+      display:block;
+      width:5em;
+      height:5em;
+      background:white;
+      border-radius:50%;
+      transition: transform 500ms; 
     }
-    & > a:hover {
-      color: var(--lightest-color);
-      background: var(--normal-color);
+  }
 }
+.mainNavigation.active {
+  width:17em;
+  height:17em;
+  top:3em;
+  left:3em;
+  transition: width 500ms,height 500ms, top 500ms, left 500ms;
+  & > .navImage{
+    transform:translate(6em,6em);
+    position: absolute;
+    & > img {
+      position: absolute;
+      z-index: 100;
+      width:6em;
+      height:6em;
+      border-radius:50%;
+      transform:translate(-0.5em,-0.5em);
+    }
+  }
+  & > .navContent {
+    position: absolute;
+    transform:translate(6em,6em);
+    & > a {
+      position: absolute;
+      display:block;
+      width:5em;
+      height:5em;
+      background:white;
+      border-radius:50%;
+    }
+    & > a:nth-of-type(1) { transform: rotate(0deg)   translate(6em) rotate(-0deg);
+    transition: transform 500ms;   }
+    & > a:nth-of-type(2) { transform: rotate(60deg)  translate(6em) rotate(-60deg);
+    transition: transform 500ms;  }
+    & > a:nth-of-type(3) { transform: rotate(120deg)  translate(6em) rotate(-120deg);
+    transition: transform 500ms;  }
+    & > a:nth-of-type(4) { transform: rotate(180deg) translate(6em) rotate(-180deg);
+    transition: transform 500ms; }
+    & > a:nth-of-type(5) { transform: rotate(240deg) translate(6em) rotate(-240deg);
+    transition: transform 500ms; }
+    & > a:nth-of-type(6) { transform: rotate(300deg) translate(6em) rotate(-300deg);
+    transition: transform 500ms; }
   }
   
 }
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity:0;
+    animation-timing-function: linear;
+  } 
+  50% {
+    transform: scale(0.5);
+    animation-timing-function: linear;
+  }
+  80% {
+    opacity:1;
+    transform: scale(0.80);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: scale(1);
+    opacity:0;
+    animation-timing-function: linear;
+  }
+}
 
+@keyframes appearInView {
+  0% {
+    opacity:0;
+    animation-timing-function: linear;
+  } 
+  100% {
+    opacity:1;
+    animation-timing-function: linear;
+  }
+}
 
 
 /** Header Styling */
@@ -73,7 +149,77 @@ body {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  & > .nameAndTagLine {
+  background:black;
+  .starName {
+    transform-origin: center;
+    transform:translate(50vw,50vh);
+  }
+  .nameRectangles {
+    opacity:0;
+    animation: appearInView 0.5s 1;
+    animation-fill-mode: forwards;
+  }
+  .nameRectangles:nth-child(11n+10) {
+    animation-delay: 553ms;
+  }
+  .nameRectangles:nth-child(11n+3) {
+    animation-delay: 827ms;
+  }
+  .nameRectangles:nth-child(11n+2) {
+    animation-delay: 1140ms;
+  }
+  .nameRectangles:nth-child(11n+6) {
+    animation-delay: 1467ms;
+  }
+  .nameRectangles:nth-child(11n+5) {
+    animation-delay: 1542ms;
+  }
+  .nameRectangles:nth-child(11n+4) {
+    animation-delay: 1955ms;
+  }
+  .nameRectangles:nth-child(11n+1) {
+    animation-delay: 2384ms;
+  }
+  .nameRectangles:nth-child(11n+8) {
+    animation-delay: 2883ms;
+  }
+  .nameRectangles:nth-child(11n+9) {
+    animation-delay: 3384ms;
+  }
+  .nameRectangles:nth-child(11n+7) {
+    animation-delay: 3890ms;
+  }
+  .nameRectangles:nth-child(11n) {
+    animation-delay: 4s;
+  }
+  .starNameBanner{
+    text {
+      font-family: 'Block Stock',serif;
+      opacity:0;
+      animation: appearInView .2s 1;
+      animation-delay: 4.5s;
+      animation-fill-mode: forwards;  
+    }
+  }
+  .stars {
+    transform-origin: center;
+    opacity:0;
+    animation: zoom 1.2s;
+    animation-iteration-count:3;
+  }
+  .stars:nth-child(1) {
+    background-position: 50% 50%;
+    animation-delay: 0s;
+  }
+  .stars:nth-child(2) {
+    background-position: 20% 60%;
+    animation-delay: 0.4s;
+  }
+  .stars:nth-child(3) {
+    background-position: -20% -30%;
+    animation-delay: 0.8s;
+  }
+    & > .nameAndTagLine {
     & > .name {
       font-size: 5em;
       & > .lastName {

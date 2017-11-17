@@ -1,0 +1,191 @@
+
+/** App Level Styling */
+body {
+    font-family: 'Roboto Slab', serif;
+    
+  }
+  .App{
+    display: flex;
+    & > .leftSection {
+      flex: 0 0 12em;
+      padding: 3em;
+      background: var(--darkest-color);   
+    }  
+    & > .rightSection {
+      padding:0 3em;
+      background: var(--lightest-color);
+    }
+  }
+  .paletteButton{ 
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    padding: 0.5em;
+  }
+  
+  /** Navigation Styling */
+  .mainNavigation {
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    & > .navImage{
+      color:var(--lightest-color); 
+      display: flex;
+      margin-bottom:5vh;
+      justify-content:center;
+      & > img {
+        width: 11.5em;
+        height: 11.5em;
+        border-radius: 50%;
+        border: 0.5em solid var(--darker-color);
+      }
+    }
+    & > .navContent {
+      display:flex;
+      justify-content:center;
+      justify-content: center;
+      flex-direction: column;
+      & > a {
+        background: var(--lightest-color);
+        display: flex;
+        padding:0.5em;
+        text-decoration: none;
+        flex-basis: 100%;
+        justify-content:center;
+        margin-bottom: 1vh;
+      }
+      & > a:hover {
+        color: var(--lightest-color);
+        background: var(--normal-color);
+  }
+    }
+    
+  }
+  
+  
+  
+  /** Header Styling */
+  
+  .header {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    & > .nameAndTagLine {
+      & > .name {
+        font-size: 5em;
+        & > .lastName {
+          margin-left: 0.1em;
+          background: var(--darkest-color);
+          padding:0.5em;
+          color: var(--lightest-color);
+        }
+      }
+  
+      & > .tagline {
+        margin-top:0;
+      }
+    }
+  }
+  
+  
+  .experienceSection {
+    min-height: 100vh;
+    & > .experienceList {
+      & > .experienceLabel {
+        font-size:3em;
+        background: var(--darkest-color);
+        color: var(--lightest-color);
+        padding: 1rem;
+      }
+      & > .experienceItem {
+        position: relative;
+        & > .organization {
+          margin:0;
+          font-size: 2em;
+        }
+        & > .experienceDate {
+          position: absolute;
+          top:0;
+          right:0;
+          font-size:1em;
+          & > .startDate {
+  
+          }
+          & > .endDate {
+  
+          }
+        }
+        & > .role {
+          & > .roleTitle {
+            font-size: 1.25rem;
+            margin-bottom:0;
+          }
+          & > .roleSummary {
+  
+          }
+          & > .roleDescriptionList {
+            & > .roleDescriptionListItem {
+  
+            }
+           }
+        }
+      }
+    }
+  }
+  
+  .personalProjectSection {
+    & > .personalProjects {
+      & > .personalProjectsLabel {
+        font-size: 3rem;
+        background: var(--darkest-color);
+        color: var(--lightest-color);
+        padding: 1rem;
+      }
+      & > .projectList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        & > .project {
+          color:var(--lightest-color);
+          flex: 0 0 20em;
+          padding: 1em;
+          background: var(--darker-color);
+          margin-bottom:3em;
+          display: flex;
+          flex-direction: column;
+          & > .projectTitle{
+            display:flex;
+          }
+          &  .projectURL {
+            background: var(--lightest-color);
+            padding:0.2em;
+            text-decoration: none;
+            flex-basis: 100%;
+          }
+          & .projectURL:hover {
+            color: var(--lightest-color);
+            background: var(--normal-color);
+          }
+        }      
+      }
+    }
+  }
+  
+  .educationSection {
+    .educationList {
+      .educationLabel {
+        font-size: 3rem;
+        background: var(--darkest-color);
+        color: var(--lightest-color);
+        padding: 1rem;
+      }
+      .educationItem {
+        .instituteAndLocation{
+          font-size: 2em;
+        }
+      }
+    }
+  }

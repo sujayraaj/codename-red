@@ -1,5 +1,4 @@
 function navigateRecurse(pos, diff, steps){
-    console.log(diff);
     if(diff < steps) return;
     window.setTimeout( ()=>{
         diff -= steps;

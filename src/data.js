@@ -156,8 +156,8 @@ const data = {
     ],
     skills:{
         skillsPieChart:{
-            width:600,
-            height:600,
+            width:1000,
+            height:1000,
             radius:300,
             pieData: [
                 { value: 10, color: 'red', opacity: 0.5, name:'A' },

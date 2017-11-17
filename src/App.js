@@ -16,8 +16,16 @@ class App extends React.PureComponent {
     constructor(props){
         super(props);
         this.state = {
-            paletteIndex:0
+            paletteIndex:0,
+            navigationState:0,
+            maxNavigationStates:2,
         };
+    }
+    changeNavigationState(){
+        const navigationState = (this.state.navigationState + 1 ) % this.state.maxNavigationStates;
+        this.setState({navigationState})
+        console.log(this.state.navigationState)
+        console.log(this.state);
     }
     render() {
         const {
@@ -38,12 +46,12 @@ class App extends React.PureComponent {
         return (
             <div className={theme.App}>
                 <ColorPallete {...palette[this.state.paletteIndex]}/>
-                <Section className={theme.leftSection}>
-                    <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl}/>
-                </Section>
+                {/*<Section className={theme.leftSection}>
+                    <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl} state={this.state.navigationState} callback={this.changeNavigationState.bind(this)}/>
+        </Section>*/}
                 <Section className={theme.rightSection}>
-                    <button className={theme.paletteButton} onClick={(evt)=> this.setState({paletteIndex:(this.state.paletteIndex+1)%palette.length})} >Next Palette</button>
-                    <Header
+{/*                    <button className={theme.paletteButton} onClick={(evt)=> this.setState({paletteIndex:(this.state.paletteIndex+1)%palette.length})} >Next Palette</button>
+    */}                    <Header
                         name={name}
                         tagline={tagline}
                         introduction={introduction}

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Navigation = ({navigationData, theme,avatarUrl }) => {
+const Navigation = ({state, navigationData, theme,avatarUrl, callback }) => {
     return (
-        <nav className={theme.mainNavigation}>
+        <nav className={ state === 0 ? theme.mainNavigation : theme.mainNavigation + ' ' + theme.active} onClick={(evt)=>{callback()}}>
             <div className={theme.navImage}>
                 <img src={avatarUrl}/>
             </div>
