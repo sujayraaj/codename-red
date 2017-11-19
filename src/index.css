@@ -9,18 +9,22 @@
 
 body {
   font-family: 'Roboto Slab', serif;
+  color:white;
+  background:black!important;
   margin:0;
   
 }
 .App{
   display: flex;
   & > .leftSection {
-    position: absolute;
-    top:200px;
-    left:200px;
+    position: fixed;
+    height:100vh;
+    width:100vw;
   }  
   & > .rightSection {
-    background: var(--lightest-color);
+    position: relative;
+    top:100vh;
+    background: black;
   }
 }
 .paletteButton{ 
@@ -201,6 +205,33 @@ body {
       animation-fill-mode: forwards;  
     }
   }
+  .starNameBannerFrontEnd {
+    text {
+      font-family: 'Block Stock',serif;
+      opacity:0;
+      animation: appearInView .2s 1;
+      animation-delay: 5.1s;
+      animation-fill-mode: forwards;  
+    }
+  }
+  .starNameBannerBackEnd {
+    text {
+      font-family: 'Block Stock',serif;
+      opacity:0;
+      animation: appearInView .2s 1;
+      animation-delay: 5.7s;
+      animation-fill-mode: forwards;  
+    }
+  }
+  .starNameBannerDevOps{
+    text {
+      font-family: 'Block Stock',serif;
+      opacity:0;
+      animation: appearInView .2s 1;
+      animation-delay: 6.3s;
+      animation-fill-mode: forwards;  
+    }
+  }
   .stars {
     transform-origin: center;
     opacity:0;
@@ -237,25 +268,42 @@ body {
 }
 
 
+@keyframes expand {
+  0% {
+    transform: rotate(40deg)translate(-7em,7em)scale(0,0);
+  } 
+  100% {
+    transform: rotate(40deg)translate(-7em,7em)scale(1,1);
+  }
+}
+
+
 .experienceSection {
-  min-height: 100vh;
   & > .experienceList {
     & > .experienceLabel {
+      margin:0;
       font-size:3em;
-      background: var(--darkest-color);
-      color: var(--lightest-color);
+      background: white;
+      color: black;
       padding: 1rem;
     }
     & > .experienceItem {
+      min-height: 100vh;      
+      border:2px solid white;
+      overflow:hidden;
       position: relative;
       & > .organization {
-        margin:0;
+        position:relative;
+        top:50vh;
+        left:5vw;
+        margin: 0;
         font-size: 2em;
+        width: 8em;
       }
       & > .experienceDate {
-        position: absolute;
-        top:0;
-        right:0;
+        position:relative;
+        top:50vh;
+        left:5vw;
         font-size:1em;
         & > .startDate {
 
@@ -265,18 +313,94 @@ body {
         }
       }
       & > .role {
-        & > .roleTitle {
-          font-size: 1.25rem;
-          margin-bottom:0;
-        }
-        & > .roleSummary {
-
-        }
-        & > .roleDescriptionList {
-          & > .roleDescriptionListItem {
-
+        width:10vw;
+        height:10vh;
+        position: absolute;
+        background:black;
+        /*&:before{
+          content: " ";
+          width: 0.1vw;
+          height: 32vh;
+          z-index: 9999;
+          border: 1px solid white;
+          background: white;
+          position: absolute;
+        }*/
+        & > .rolewrapper{
+          background:black;
+          position:relative;
+          z-index:1111;
+          width:100%;
+          height:100%;
+          overflow:hidden;
+          & > .roleTitle {
+            font-size: 1.25rem;
+            margin-bottom:0;
           }
-         }
+          & > .roleSummary {
+  
+          }
+          & > .roleDescriptionList {
+            display:none;
+            & > .roleDescriptionListItem {
+  
+            }
+           }
+          }
+      }
+      & > .role + div {
+        content: " ";
+        width: 0.1vw;
+        height: 32vh;
+        z-index: 9999;
+        border: 1px solid white;
+        background: white;
+        position: absolute;
+      }
+      & > .role:nth-child(5n) {
+        left: 30vw;
+        top: 10vh;
+      }
+      & > .role:nth-child(5n) + div {
+        left: 30vw;
+        top: 10vh;
+        transform: rotate(40deg)translate(-7em,7em)scale(0,0);
+        transform-origin: bottom left;
+        animation: expand 1s 1;
+        animation-fill-mode: forwards;  
+        animation-delay: 2s;
+      }
+      & > .role:nth-child(5n+1) {
+        top:80vh;
+        left:30vw;
+        &:before{
+          transform: rotate(145deg)translate(-5em,10em);
+          
+        }
+     }
+      & > .role:nth-child(5n+2) {
+        top:80vh;
+        left:70vw;
+        &:before{
+          height:73vh;
+          transform: rotate(116deg)translate(-15em,25em);
+        }
+      }
+      & > .role:nth-child(5n+3) {
+        top:50vh;
+        left:50vw;
+        &:before{
+          transform: rotate(90deg)translate(-5em,10em);
+          
+        }
+     }
+      & > .role:nth-child(5n+4) {
+        top:10vh;
+        left:70vw;
+        &:before{
+          height:73vh;
+          transform:rotate(60deg)translate(-16em,10em);          
+        }
       }
     }
   }

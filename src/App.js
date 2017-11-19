@@ -46,12 +46,8 @@ class App extends React.PureComponent {
         return (
             <div className={theme.App}>
                 <ColorPallete {...palette[this.state.paletteIndex]}/>
-                {/*<Section className={theme.leftSection}>
-                    <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl} state={this.state.navigationState} callback={this.changeNavigationState.bind(this)}/>
-        </Section>*/}
-                <Section className={theme.rightSection}>
-{/*                    <button className={theme.paletteButton} onClick={(evt)=> this.setState({paletteIndex:(this.state.paletteIndex+1)%palette.length})} >Next Palette</button>
-    */}                    <Header
+               <Section className={theme.leftSection}>
+                  <Header
                         name={name}
                         tagline={tagline}
                         introduction={introduction}
@@ -61,6 +57,11 @@ class App extends React.PureComponent {
                         firstName={firstName}
                         lastName={lastName}
                     />
+
+                {/*     <Navigation navigationData={navigation} theme={theme} avatarUrl={avatarUrl} state={this.state.navigationState} callback={this.changeNavigationState.bind(this)}/>*/}
+        </Section>
+                <Section className={theme.rightSection}>
+{/*                    <button className={theme.paletteButton} onClick={(evt)=> this.setState({paletteIndex:(this.state.paletteIndex+1)%palette.length})} >Next Palette</button>*/}
                     <Body
                         experienceListData={experience}
                         educationListData={education}

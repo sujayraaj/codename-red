@@ -62,7 +62,28 @@ export const StarField = ({numberOfStars}) =>{
              fill: '#ffffff'}}>
              DEVELOPER
   </text></g>
-       {/*         <defs>
+  <g className={styles.starNameBannerFrontEnd}>
+  <text x="5%" y="33.33%"
+style={{fontSize: '35px',
+       stroke: '#000000',
+       fill: '#ffffff'}}>
+       FULLTIME FRONTEND
+</text></g>
+<g className={styles.starNameBannerBackEnd}>
+        <text x="5%" y="50%"
+      style={{fontSize: '35px',
+             stroke: '#000000',
+             fill: '#ffffff'}}>
+             PART-TIME BACKEND
+  </text></g>
+  <g className={styles.starNameBannerDevOps}>
+        <text x="5%" y="66.66%"
+      style={{fontSize: '35px',
+             stroke: '#000000',
+             fill: '#ffffff'}}>
+             SOMETIMES DEVOPS
+  </text></g>
+ {/*         <defs>
         <g id="stars">
         {
             Array.apply(null, Array(numberOfStars)).map(() => <circle cx={Math.random()*100+'%'} cy={Math.random()*100+'%'} r="4" stroke="black" stroke-width="3" fill="white" />)

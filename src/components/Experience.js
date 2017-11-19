@@ -15,7 +15,7 @@ const Experience = ({
             <h4 className={theme.organization}>{organization}</h4>
             <p className={theme.experienceDate}><span className={theme.startDate}>{startDate}</span> to <span className={theme.endDate}>{endDate}</span></p>
             {
-                roles.map(val=> <Role theme={theme} {...val}/>)
+                roles.map(val=> [<Role theme={theme} {...val}/>,<div></div>])
             }
         </article>        
 
